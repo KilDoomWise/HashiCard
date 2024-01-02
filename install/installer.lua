@@ -1,5 +1,7 @@
 os.execute("clear")
 
+local component = require("component")
+local gpu = component.gpu
 local logo = [[
   _   _           _     _  ____              _ 
  | | | | __ _ ___| |__ (_)/ ___|__ _ _ __ __| |
@@ -8,7 +10,7 @@ local logo = [[
  |_| |_|\__,_|___/_| |_|_|\____\__,_|_|  \__,_|
                                                
 ]]
-
+gpu.setForeground(0xa020f0)
 print(logo .. "\n")
 print("Loading...\n")
 os.sleep(1)
@@ -17,9 +19,9 @@ print("Шаг 1: В каком режиме вы хотите использов
 io.write("В каком режиме вы хотите использовать терминал (1/2): ")
 local mode = io.read()
 
-if mode == 1 then
+if (mode == 1) then
   os.execute("wget -f https://raw.githubusercontent.com/KilDoomWise/HashiCard/master/modules/module_controller.lua && module_controller.lua")
-elseif mode == 2 then
+elseif (mode == 2) then
   os.execute("wget -f https://raw.githubusercontent.com/KilDoomWise/HashiCard/master/modules/module_terminal.lua && module_terminal.lua")
 else
   os.exit()
