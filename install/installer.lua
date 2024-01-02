@@ -19,10 +19,10 @@ print("Шаг 1: В каком режиме вы хотите использов
 io.write("В каком режиме вы хотите использовать терминал (1/2): ")
 local mode = io.read()
 
-if (mode == 1) then
-  os.execute("wget -f https://raw.githubusercontent.com/KilDoomWise/HashiCard/master/modules/module_controller.lua && module_controller.lua")
-elseif (mode == 2) then
-  os.execute("wget -f https://raw.githubusercontent.com/KilDoomWise/HashiCard/master/modules/module_terminal.lua && module_terminal.lua")
+if (mode == "1") then
+ os.execute("wget -f https://raw.githubusercontent.com/KilDoomWise/HashiCard/master/modules/module_controller.lua && module_controller.lua")
+elseif (mode == "2") then
+ os.execute("wget -f https://raw.githubusercontent.com/KilDoomWise/HashiCard/master/modules/module_terminal.lua && module_terminal.lua")
 else
-  os.exit()
+ os.exit()
 end
